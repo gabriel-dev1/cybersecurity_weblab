@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Contato</h1>
+            <div id="state"> 
+            </div>
+        </div>
+    </header>
+
+    <main class="flex">
+        <div>
+          <form id="formContato" action="">
+            <label for="name">Seu nome:</label>
+            <div>
+                <input id="name" type="text">
+            </div>
+            <label for="name">Seu email:</label>
+            <div>
+                <input id="email" type="email">
+            </div>
+            <label for="message">Sua mensagem:</label>
+            <div>
+                <textarea rows="10" class="text" name="" id="message"></textarea>
+            </div>
+            <button id="buttonForm" class="buttons" type="submit">Enviar</button>
+            <p id="mensagemErro" style="color: red; display: none;"></p>
+          </form>
+        </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

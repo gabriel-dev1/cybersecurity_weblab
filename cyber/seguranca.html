@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>Geração de Senhas</h1>
+            <div id="state"> 
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <input type="text" id="senha" class="senha" readonly>
+
+        <div class="controle">
+            <p>Tamanho: <span id="valorTamanho">12</span></p>
+            <input type="range" id="tamanho" min="4" max="50" value="12">
+        </div>
+
+        <div class="opcoes">
+            <label><input type="checkbox" id="maiusculas" checked> Letras Maiúsculas</label>
+            <label><input type="checkbox" id="minusculas" checked> Letras Minúsculas</label>
+            <label><input type="checkbox" id="numeros" checked> Números</label>
+            <label><input type="checkbox" id="simbolos" checked> Símbolos</label>
+        </div>
+
+        <button class="gerar" onclick="gerarSenha()">Gerar Senha</button>
+        <button class="copiar" onclick="copiarSenha()">Copiar</button>
+    </main>
+    <script src="./js/script.js"></script>
+    <script src="./js/passwordgen.js"></script>
+</body>
+</html>
