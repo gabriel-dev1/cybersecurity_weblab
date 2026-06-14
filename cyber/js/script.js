@@ -3,8 +3,8 @@ const nav = document.getElementById("state");
 const state = `<header><nav class="flex" id="fragment_nav2">
     <div>
       <a href="./index.html">Início</a>
-      <a href="./content.html">Cartilha 1</a>
-      <a href="./content2.html">Cartilha 2</a>
+      <a href="./content.html">Cartilha Redes Sociais</a>
+      <a href="./content2.html">Cartilha Códigos Maliciosos</a>
       <a href="./seguranca.html">Gerador de Senhas</a>
       <a href="./about.html">Sobre</a>
       <a href="./contact.html">Contato</a>
@@ -81,7 +81,6 @@ document.getElementById('btn-normal').addEventListener('click', () => {
 
 const botaoTema = document.getElementById('btn-tema');
 
-// 1. Verifica se o usuário já tem uma preferência salva
 const temaSalvo = localStorage.getItem('tema');
 
 if (temaSalvo) {
@@ -89,22 +88,17 @@ if (temaSalvo) {
   atualizarBotao(temaSalvo);
 }
 
-// 2. Escuta o clique no botão para alternar o tema
 botaoTema.addEventListener('click', () => {
   const temaAtual = htmlElement.getAttribute('data-theme');
   const novoTema = temaAtual === 'light' ? 'dark' : 'light';
   
-  // Aplica o novo tema no HTML
   htmlElement.setAttribute('data-theme', novoTema);
   
-  // Salva a escolha no localStorage
   localStorage.setItem('tema', novoTema);
   
-  // Atualiza o texto e a acessibilidade do botão
   atualizarBotao(novoTema);
 });
 
-// Funçao auxiliar para mudar o texto e o aria-label do botão
 function atualizarBotao(tema) {
   if (tema === 'light') {
     botaoTema.innerHTML = 'Modo Diurno';
